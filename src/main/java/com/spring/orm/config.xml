@@ -45,12 +45,14 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
-	<bean class="com.spring.orm.dao.EmployeeDaoImpl" name="employeeDao">
-		<property name="hibernateTemplate" ref="hibernateTemplate" />
-	</bean>
+	
 
 	<bean
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
 		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean class="com.spring.orm.dao.EmployeeDaoImpl" name="employeeDao">
+		<property name="hibernateTemplate" ref="hibernateTemplate" />
 	</bean>
 </beans>
